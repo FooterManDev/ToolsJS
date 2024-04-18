@@ -1,4 +1,4 @@
-package io.github.toolsjs.kubejs.builders;
+package io.github.toolsjs.kubejs.builders.cucumber;
 
 import com.blakebr0.cucumber.item.tool.BaseCrossbowItem;
 import dev.latvian.mods.kubejs.item.custom.HandheldItemBuilder;

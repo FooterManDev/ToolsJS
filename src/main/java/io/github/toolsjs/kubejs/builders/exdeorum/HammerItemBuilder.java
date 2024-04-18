@@ -1,4 +1,4 @@
-package io.github.toolsjs.kubejs.builders;
+package io.github.toolsjs.kubejs.builders.exdeorum;
 
 import dev.latvian.mods.kubejs.item.custom.HandheldItemBuilder;
 import net.minecraft.resources.ResourceLocation;
