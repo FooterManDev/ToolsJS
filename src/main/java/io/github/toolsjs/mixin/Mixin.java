@@ -1,4 +1,4 @@
-package com.example.exampleaddon.mixin;
+package io.github.toolsjs.mixin;
 
 public class Mixin {
     //Mixins here
