@@ -19,6 +19,7 @@ public class ToolsJSPlugin extends KubeJSPlugin {
             RegistryInfo.ITEM.addType("wateringcan", WateringcanItemBuilder.class, WateringcanItemBuilder::new);
         }
         RegistryInfo.ITEM.addType("horse_armor", HorsearmorItemBuilder.class, HorsearmorItemBuilder::new);
+        RegistryInfo.ITEM.addType("shield", ShieldBuilder.class, ShieldBuilder::new);
         ToolsJS.LOGGER.info("This is my KubeJS Plugin!");
     }
 }
