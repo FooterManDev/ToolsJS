@@ -5,7 +5,10 @@ A [KubeJS](https://kubejs.com) addon for creating tools! Any type of tools! Incl
 - [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs)
 - [Rhino](https://www.curseforge.com/minecraft/mc-mods/rhino)
 - [Architectury](https://www.curseforge.com/minecraft/mc-mods/architectury-api)
+
+## Optional Dependencies
 - [Cucumber Library](https://www.curseforge.com/minecraft/mc-mods/cucumber)
+
 ### Recommend but not required
 - [ProbeJS](https://www.curseforge.com/minecraft/mc-mods/probejs)
 
@@ -23,7 +26,7 @@ StartupEvents.registry("item", (event) => {
     event.create("test_wateringcan", "wateringcan").range(2).chance(50);
 });
 ```
-You can also edit already exsisting tools that are made with Cucumber Library
+You can also edit already existing tools that are made with Cucumber Library
 ```js
 CucumberItems.modification((event) => {
     event.modify("mysticalagriculture:inferium_axe", (item) => {

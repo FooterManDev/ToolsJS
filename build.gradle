@@ -62,6 +62,12 @@ repositories {
     maven {
         url "https://cursemaven.com"
     }
+
+    // Ex Nihilo: Sequentia
+    maven {
+        url = "https://dl.cloudsmith.io/public/novamachina-mods/release/maven/"
+
+    }
 }
 
 dependencies {
@@ -79,13 +85,19 @@ dependencies {
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.3.2"))
     implementation(include("io.github.llamalad7:mixinextras-forge:0.3.2"))
 
-    // Cucumber and ProbeJS
+    /* Cucumber and ProbeJS */
     modImplementation("com.blakebr0.cucumber:Cucumber:${cucumber_ver}")
     modImplementation("maven.modrinth:probejs:${probe_ver}")
 
     /* Sophisticated */
     modImplementation("curse.maven:sophisticated-backpacks-422301:${soph_backpacks}")
     modImplementation("curse.maven:sophisticated-core-618298:${soph_core}")
+
+    /* Ex Deorum */
+    modImplementation("maven.modrinth:WP0FLyzv:${exde_version}")
+
+    /* JEI */
+    modRuntimeOnly("maven.modrinth:jei:${jei_ver}")
 }
 
 processResources {
