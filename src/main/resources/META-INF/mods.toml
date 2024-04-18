@@ -1,36 +1,36 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
-license = "All rights reserved" # https://choosealicense.com/
+license = "MIT"
 
 
-# issueTrackerURL="https://github.com/invalid/pleasechangeme/issues"
+issueTrackerURL="https://github.com/FooterManDev/ToolsJS"
 
 [[mods]]
-modId = "exampleaddon"
+modId = "toolsjs"
 version = "${version}"
-displayName = "Example Addon"
+displayName = "Toolsjs"
 logoFile="icon.png"
 # credits="Thanks to FooterMan for the KubeJS Addon Template!"
-# authors="YourNameHere"
+authors="FooterMan,Bluemethyst"
 description = '''
-Example KubeJS Addon.
+A KubeJS addon for custom Tools.
 '''
 
-[[dependencies.exampleaddon]]
+[[dependencies.toolsjs]]
 modId = "forge"
 mandatory = true
 versionRange = "[47,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.exampleaddon]]
+[[dependencies.toolsjs]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.20.1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.exampleaddon]]
+[[dependencies.toolsjs]]
 modId = "kubejs"
 mandatory = true
 versionRange = "[2001.6.4,)"

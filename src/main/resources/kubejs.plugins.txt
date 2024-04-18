@@ -1,1 +1,1 @@
-com.example.exampleaddon.kubejs.ExampleKubeJSPlugin
+io.github.toolsjs.kubejs.ToolsJSPlugin
