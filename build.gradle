@@ -84,7 +84,8 @@ dependencies {
     modImplementation("maven.modrinth:probejs:${probe_ver}")
 
     /* Sophisticated */
-    modImplementation("curse.maven:sophisticated-backpacks-422301:${soph_ver}")
+    modImplementation("curse.maven:sophisticated-backpacks-422301:${soph_backpacks}")
+    modImplementation("curse.maven:sophisticated-core-618298:${soph_core}")
 }
 
 processResources {
