@@ -7,6 +7,7 @@ import io.github.toolsjs.ToolsJS;
 import dev.latvian.mods.kubejs.KubeJSPlugin;
 import io.github.toolsjs.item.CucumberItemModificationEventJS;
 import io.github.toolsjs.kubejs.builders.*;
+import io.github.toolsjs.kubejs.builders.sophisticated.BackpackBuilder;
 import io.github.toolsjs.kubejs.events.CucumberItemEvents;
 
 @SuppressWarnings("SpellCheckingInspection")
