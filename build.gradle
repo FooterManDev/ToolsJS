@@ -57,6 +57,11 @@ repositories {
             includeGroup "maven.modrinth"
         }
     }
+
+    // Curse
+    maven {
+        url "https://cursemaven.com"
+    }
 }
 
 dependencies {
@@ -77,6 +82,9 @@ dependencies {
     // Cucumber and ProbeJS
     modImplementation("com.blakebr0.cucumber:Cucumber:${cucumber_ver}")
     modImplementation("maven.modrinth:probejs:${probe_ver}")
+
+    /* Sophisticated */
+    modImplementation("curse.maven:sophisticated-backpacks-422301:${soph_ver}")
 }
 
 processResources {
