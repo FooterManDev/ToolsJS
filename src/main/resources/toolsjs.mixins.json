@@ -1,9 +1,14 @@
 {
   "required": true,
-  "package": "com.example.exampleaddon.mixin",
+  "package": "io.github.toolsjs.mixin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
   "mixins": [
+    "CucumberItemMixin",
+    "accessors.CucumberAttackDamageAccessor",
+    "accessors.CucumberAttackSpeedAccessor",
+    "accessors.CucumberChanceAccessor",
+    "accessors.CucumberRangeAccessor"
   ],
   "client": [
   ],
