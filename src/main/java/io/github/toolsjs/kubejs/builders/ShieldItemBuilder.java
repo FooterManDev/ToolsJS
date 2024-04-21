@@ -5,10 +5,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ShieldItem;
 
-public class ShieldBuilder extends HandheldItemBuilder {
+public class ShieldItemBuilder extends HandheldItemBuilder {
 
 
-    public ShieldBuilder(ResourceLocation i) {
+    public ShieldItemBuilder(ResourceLocation i) {
         super(i, 0, 0);
     }
 

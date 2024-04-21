@@ -62,12 +62,6 @@ repositories {
     maven {
         url "https://cursemaven.com"
     }
-
-    // Ex Nihilo: Sequentia
-    maven {
-        url = "https://dl.cloudsmith.io/public/novamachina-mods/release/maven/"
-
-    }
 }
 
 dependencies {

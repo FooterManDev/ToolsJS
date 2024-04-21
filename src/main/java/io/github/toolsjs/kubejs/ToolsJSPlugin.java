@@ -36,8 +36,9 @@ public class ToolsJSPlugin extends KubeJSPlugin {
             RegistryInfo.ITEM.addType("sophisticatedbackpacks:backpack", BackpackBuilder.class, BackpackBuilder::new);
         }
         RegistryInfo.ITEM.addType("horse_armor", HorsearmorItemBuilder.class, HorsearmorItemBuilder::new);
-        RegistryInfo.ITEM.addType("shield", ShieldBuilder.class, ShieldBuilder::new);
-        ToolsJS.LOGGER.info("This is my KubeJS Plugin!");
+        RegistryInfo.ITEM.addType("shield", ShieldItemBuilder.class, ShieldItemBuilder::new);
+        RegistryInfo.ITEM.addType("brush", BrushItemBuilder.class, BrushItemBuilder::new);
+        ToolsJS.LOGGER.info("ToolsJS Loaded Successfully! Happy tooling!");
     }
 
     @Override
