@@ -8,6 +8,8 @@ A [KubeJS](https://kubejs.com) addon for creating tools! Any type of tools! Incl
 
 ## Optional Dependencies
 - [Cucumber Library](https://www.curseforge.com/minecraft/mc-mods/cucumber)
+- [Ex Deorum](https://www.curseforge.com/minecraft/mc-mods/ex-deorum)
+- [Sophisticated Backpacks](https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks)
 
 ### Recommend but not required
 - [ProbeJS](https://www.curseforge.com/minecraft/mc-mods/probejs)
