@@ -19,20 +19,26 @@ For a more in-depth wiki refer [here](https://http.cat/501)
 ```js
 // Inside startup_scripts, this will create a tool with no texture
 StartupEvents.registry("item", (event) => {
-    event.create("test_crossbow", "crossbow");
-    event.create("test_fishingrod", "fishingrod");
-    event.create("test_paxel", "paxel");
-    event.create("test_scythe", "scythe");
+    event.create("test_crossbow", "cucumber:crossbow");
+    event.create("test_fishingrod", "cucumber:fishing_rod");
+    event.create("test_paxel", "cucumber:paxel");
+    event.create("test_scythe", "cucumber:scythe");
     event.create("test_shear", "shears");
-    event.create("test_sickle", "sickle").range(3);
-    event.create("test_wateringcan", "wateringcan").range(2).chance(50);
+    event.create("test_sickle", "cucumber:sickle").breakingRange(3);
+    event.create("test_wateringcan", "cucumber:watering_can").wateringRange(2).wateringChance(50);
+    event.create("test_hammer", "exdeorum:hammer").tag("exdeorum:hammers");
+    event.create("test_crook", "exdeorum:crook").tag("exdeorum:crooks");
+    event.create("test_exdewateringcan", "exdeorum:watering_can");
+    event.create("test_brush", "brush");
+    event.create("backpack", "sophisticatedbackpacks:backpack").setSlots(54).setUpgradeSlots(9);
 });
 ```
 You can also edit already existing tools that are made with Cucumber Library
 ```js
 CucumberItems.modification((event) => {
-    event.modify("mysticalagriculture:inferium_axe", (item) => {
-        item.cucumberAttackDamage = 1000;
+    event.modify("kubejs:test_wateringcan", (item) => {
+        item.range = 50;
+        item.chance = 1;
     });
 });
 ```

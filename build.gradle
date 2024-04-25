@@ -104,8 +104,6 @@ dependencies {
     /* JEI */
     modRuntimeOnly("maven.modrinth:jei:${jei_ver}")
 
-
-
 }
 
 processResources {

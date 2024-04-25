@@ -9,11 +9,11 @@ import java.util.function.IntSupplier
 import java.util.function.Supplier
 
 class BackpackBuilder(i: ResourceLocation?) : HandheldItemBuilder(i, 0f, 0f) {
-    var slots: IntSupplier = IntSupplier { 29 }
-    var upgrade_slots: IntSupplier = IntSupplier { 1 }
-    var block: Supplier<BackpackBlock> = Supplier { BackpackBlock() }
+    private var slots: IntSupplier = IntSupplier { 29 }
+    private var upgradeSlots: IntSupplier = IntSupplier { 1 }
+    private var block: Supplier<BackpackBlock> = Supplier { BackpackBlock() }
     override fun createObject(): Item {
-        return BackpackItem(slots, upgrade_slots, block)
+        return BackpackItem(slots, upgradeSlots, block)
     }
 
     fun setSlots(slots: Int): BackpackBuilder {
@@ -21,8 +21,8 @@ class BackpackBuilder(i: ResourceLocation?) : HandheldItemBuilder(i, 0f, 0f) {
         return this
     }
 
-    fun setUpgradeSlots(upgrade_slots: Int): BackpackBuilder {
-        this.upgrade_slots = IntSupplier { upgrade_slots }
+    fun setUpgradeSlots(upgradeSlots: Int): BackpackBuilder {
+        this.upgradeSlots = IntSupplier { upgradeSlots }
         return this
     }
 }
