@@ -1,17 +1,16 @@
-package io.github.toolsjs.mixin.accessors;
+package io.github.toolsjs.mixin.accessors
 
-import com.blakebr0.cucumber.item.BaseWateringCanItem;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Mutable;
-import org.spongepowered.asm.mixin.gen.Accessor;
+import com.blakebr0.cucumber.item.BaseWateringCanItem
+import org.spongepowered.asm.mixin.Mixin
+import org.spongepowered.asm.mixin.Mutable
+import org.spongepowered.asm.mixin.gen.Accessor
 
-@Mixin(value = BaseWateringCanItem.class, remap = false)
-public interface CucumberChanceAccessor {
-
+@Mixin(value = [BaseWateringCanItem::class], remap = false)
+interface CucumberChanceAccessor {
     @Accessor("chance")
-    double kjs_ccmbr$getChance();
+    fun `kjs_ccmbr$getChance`(): Double
 
     @Mutable
     @Accessor("chance")
-    void kjs_ccmbr$setChance(double chance);
+    fun `kjs_ccmbr$setChance`(chance: Double)
 }
