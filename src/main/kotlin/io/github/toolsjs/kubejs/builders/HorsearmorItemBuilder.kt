@@ -8,7 +8,7 @@ import net.minecraft.world.item.Item
 
 class HorsearmorItemBuilder(i: ResourceLocation?) : HandheldItemBuilder(i, 0.5f, -2f) {
     private var armor = 0
-    private var location: ResourceLocation? = null
+    private var model: ResourceLocation? = null
 
 
     @Info(value = "The amount of armor you would like the horse armor to provide to a horse when equipped")
@@ -18,12 +18,12 @@ class HorsearmorItemBuilder(i: ResourceLocation?) : HandheldItemBuilder(i, 0.5f,
     }
 
     @Info(value = "The location of the horse armor model texture")
-    fun location(location: String?): HorsearmorItemBuilder {
-        this.location = ResourceLocation(location)
+    fun model(model: ResourceLocation): HorsearmorItemBuilder {
+        this.model = model
         return this
     }
 
     override fun createObject(): Item {
-        return HorseArmorItem(armor, location, createItemProperties())
+        return HorseArmorItem(armor, model, createItemProperties())
     }
 }

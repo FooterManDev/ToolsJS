@@ -7,14 +7,14 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.Item
 
 class SickleItemBuilder(i: ResourceLocation?) : HandheldItemBuilder(i, 0.5f, -2f) {
-    private var range = 3
+    private var breakingRange = 3
     @Info(value = "The range of the sickles grass breaking capabilities")
-    fun range(range: Int): SickleItemBuilder {
-        this.range = range
+    fun breakingRange(breakingRange: Int): SickleItemBuilder {
+        this.breakingRange = breakingRange
         return this
     }
 
     override fun createObject(): Item {
-        return BaseSickleItem(toolTier, range) { properties: Item.Properties? -> createItemProperties() }
+        return BaseSickleItem(toolTier, breakingRange) { properties: Item.Properties? -> createItemProperties() }
     }
 }

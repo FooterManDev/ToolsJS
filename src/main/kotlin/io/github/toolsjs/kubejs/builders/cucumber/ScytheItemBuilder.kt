@@ -7,14 +7,14 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.Item
 
 class ScytheItemBuilder(i: ResourceLocation?) : HandheldItemBuilder(i, 0f, -2f) {
-    private var range = 3
+    private var breakingRange = 3
     @Info(value = "The range of the scythes sweeping attacks")
-    fun range(range: Int): ScytheItemBuilder {
-        this.range = range
+    fun breakingRange(breakingRange: Int): ScytheItemBuilder {
+        this.breakingRange = breakingRange
         return this
     }
 
     override fun createObject(): Item {
-        return BaseScytheItem(toolTier, range) { properties: Item.Properties? -> createItemProperties() }
+        return BaseScytheItem(toolTier, breakingRange) { properties: Item.Properties? -> createItemProperties() }
     }
 }
