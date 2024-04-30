@@ -5,6 +5,7 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.Item
 import net.p3pp3rf1y.sophisticatedbackpacks.backpack.BackpackBlock
 import net.p3pp3rf1y.sophisticatedbackpacks.backpack.BackpackItem
+import net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContainer
 import java.util.function.IntSupplier
 import java.util.function.Supplier
 
