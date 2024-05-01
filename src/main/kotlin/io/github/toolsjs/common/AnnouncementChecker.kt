@@ -20,10 +20,13 @@ class AnnouncementChecker {
         @OptIn(DelicateCoroutinesApi::class)
         fun onPlayerLogin(player: ServerPlayer) {
             GlobalScope.launch {
-                val url = URL("https://raw.githubusercontent.com/Footermandev/ToolsJS/master/announcement.json")
+                // allow url to be set in config
+                val url = URL("https://raw.githubusercontent.com/FooterManDev/ToolsJS/20.1/announcement.json5")
                 val rawAnnouncement = withContext(Dispatchers.IO) { url.readText() }
                 val gson = Gson()
                 val announcement: Announcement = gson.fromJson(rawAnnouncement, Announcement::class.java)
+                // formatting is all temporary and subject to change to a better format
+                // needs config files in kubejs/config for what announcement level to show
                 if (announcement.importance.isNotEmpty() && announcement.title.isNotEmpty() && announcement.message.isNotEmpty()) {
                     if (announcement.importance.lowercase() == "severe") {
                         player.sendSystemMessage(Component.literal("IMPORTANT: ${announcement.message}"))
