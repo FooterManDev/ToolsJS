@@ -1,0 +1,5 @@
+{
+    "importance": "DEBUG", //can be DEBUG, MISC, or SEVERE
+    "title": "test title",
+    "message": "test message"
+}
