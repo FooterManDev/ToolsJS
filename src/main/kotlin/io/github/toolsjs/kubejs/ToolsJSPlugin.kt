@@ -9,6 +9,7 @@ import io.github.toolsjs.item.CucumberItemModificationEventJS
 import io.github.toolsjs.kubejs.builders.BrushItemBuilder
 import io.github.toolsjs.kubejs.builders.HorsearmorItemBuilder
 import io.github.toolsjs.kubejs.builders.ShieldItemBuilder
+import io.github.toolsjs.kubejs.builders.TotemItemBuilder
 import io.github.toolsjs.kubejs.builders.cucumber.*
 import io.github.toolsjs.kubejs.builders.exdeorum.CrookItemBuilder
 import io.github.toolsjs.kubejs.builders.exdeorum.ExDeWateringcanItemBuilder
@@ -39,6 +40,7 @@ class ToolsJSPlugin : KubeJSPlugin() {
         RegistryInfo.ITEM.addType("horse_armor", HorsearmorItemBuilder::class.java) { i: ResourceLocation? -> HorsearmorItemBuilder(i) }
         RegistryInfo.ITEM.addType("shield", ShieldItemBuilder::class.java) { i: ResourceLocation? -> ShieldItemBuilder(i) }
         RegistryInfo.ITEM.addType("brush", BrushItemBuilder::class.java) { i: ResourceLocation? -> BrushItemBuilder(i) }
+        RegistryInfo.ITEM.addType("totem", TotemItemBuilder::class.java) { i: ResourceLocation? -> TotemItemBuilder(i) }
         ToolsJS.LOGGER.info("ToolsJS Loaded Successfully! Happy tooling!")
     }
 

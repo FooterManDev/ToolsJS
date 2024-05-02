@@ -6,7 +6,7 @@ import io.github.toolsjs.ToolsJS
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerPlayer
 import net.minecraftforge.fml.common.Mod
-import com.google.gson.Gson
+import io.github.toolsjs.ToolsJS.GSON
 
 data class Announcement(
     val importance: String,
@@ -20,20 +20,15 @@ class AnnouncementChecker {
         @OptIn(DelicateCoroutinesApi::class)
         fun onPlayerLogin(player: ServerPlayer) {
             GlobalScope.launch {
-                // allow url to be set in config
-                val url = URL("https://raw.githubusercontent.com/FooterManDev/ToolsJS/20.1/announcement.json5")
+                val url = URL(ToolsJS.CONFIG?.announcementUrl)
                 val rawAnnouncement = withContext(Dispatchers.IO) { url.readText() }
-                val gson = Gson()
-                val announcement: Announcement = gson.fromJson(rawAnnouncement, Announcement::class.java)
-                // formatting is all temporary and subject to change to a better format
-                // needs config files in kubejs/config for what announcement level to show
+                val announcement: Announcement = GSON.fromJson(rawAnnouncement, Announcement::class.java)
                 if (announcement.importance.isNotEmpty() && announcement.title.isNotEmpty() && announcement.message.isNotEmpty()) {
-                    if (announcement.importance.lowercase() == "severe") {
-                        player.sendSystemMessage(Component.literal("IMPORTANT: ${announcement.message}"))
-                    } else if (announcement.importance.lowercase() == "misc") {
-                        player.sendSystemMessage(Component.literal("MISC: ${announcement.message}"))
-                    } else if (announcement.importance.lowercase() == "debug") {
+                    if (ToolsJS.CONFIG?.announcementLevel == announcement.importance) {
+                        player.sendSystemMessage(Component.literal(announcement.title))
                         player.sendSystemMessage(Component.literal(announcement.message))
+                    } else {
+                        ToolsJS.LOGGER.info("Announcement level is not high enough to show")
                     }
                 } else {
                     ToolsJS.LOGGER.warn("Failed to parse announcement, report to Footerman or Blue")
