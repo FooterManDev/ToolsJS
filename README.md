@@ -30,6 +30,7 @@ StartupEvents.registry("item", (event) => {
     event.create("test_crook", "exdeorum:crook").tag("exdeorum:crooks");
     event.create("test_exdewateringcan", "exdeorum:watering_can");
     event.create("test_brush", "brush");
+// Currently crashes the game:
     event.create("backpack", "sophisticatedbackpacks:backpack").setSlots(54).setUpgradeSlots(9);
 });
 ```
