@@ -5,7 +5,8 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.ShieldItem
 
-class ShieldItemBuilder(i: ResourceLocation?) : HandheldItemBuilder(i, 0f, 0f) {
+class ShieldItemBuilder(id: ResourceLocation) : HandheldItemBuilder(id, 0f, 0f)
+{
     override fun createObject(): Item {
         return ShieldItem(createItemProperties())
     }

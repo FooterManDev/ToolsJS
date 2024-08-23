@@ -1,11 +1,18 @@
 package io.github.toolsjs
 
-import net.minecraftforge.fml.common.Mod
+import net.neoforged.fml.ModList
+import net.neoforged.fml.common.Mod
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 
-@Mod(ToolsJS.ID)
+const val ID = "toolsjs"
+
+@Mod(ID)
+@Suppress("unused")
 object ToolsJS {
-    const val ID = "toolsjs"
-    val LOGGER: Logger = LogManager.getLogger()
+    val logger: Logger = LogManager.getLogger()
+}
+
+fun isModLoaded(modId: String): Boolean {
+    return ModList.get().isLoaded(modId)
 }
